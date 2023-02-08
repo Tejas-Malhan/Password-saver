@@ -3,7 +3,7 @@ import time
 from colorama import Fore, Style
 
 
-
+#setting up the colors
 red = Fore.RED
 
 lred = Fore.LIGHTRED_EX
