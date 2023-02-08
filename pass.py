@@ -48,13 +48,17 @@ diary = {}
 
 
 
-instruction = f"""\n1:Display Your passwords 📃\n2:Adds password ➕\n3:Removes Password ➖\n4:Exit❌ \n """
+instruction = f"""\n1:Display Your passwords 📃\n2:Adds password ➕\n3:Removes Password ➖\n4:Exit❌ \n0:search """
 
 while True:
 
   print(instruction)
 
   c1 = int(input(f"{green}Enter your choice :{blue}"))
+  if c1 == 0:
+    m= input("Enter the website:")
+    if m in diary:
+      print(diary[m])
 
   if c1 == 1:
 
@@ -72,7 +76,7 @@ while True:
 
     for i in diary:
 
-      print(f"{i}:{diary[i]})
+      print(f"{i}:{diary[i]}")
 
   if c1 == 2:
 
