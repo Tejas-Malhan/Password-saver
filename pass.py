@@ -1,7 +1,7 @@
 import time
 import sqlite3
 from colorama import Fore, Style
-
+from sqlitedict import SqliteDict
 
 #setting up the colors
 red = Fore.RED
@@ -44,7 +44,7 @@ reset_style = Style.RESET_ALL
 
 diary = {}
 
-instruction = f"""\n1:Display Your passwords 📃\n2:Adds password ➕\n3:Removes Password ➖\n4:Exit❌ \n0:search """
+instruction = f"""0:search\n1:Display Your passwords 📃\n2:Adds password ➕\n3:Removes Password ➖\n4:Exit❌ \n0:search """
 
 while True:
 
@@ -55,7 +55,8 @@ while True:
     m= input("Enter the website:")
     if m in diary:
       print(diary[m])
-
+    else:
+      print("No such website found❌")
   if c1 == 1:
 
     ("you choose", c1)
