@@ -1,5 +1,5 @@
 import time
-
+import sqlite3
 from colorama import Fore, Style
 
 
@@ -43,10 +43,6 @@ bright = Style.BRIGHT
 reset_style = Style.RESET_ALL
 
 diary = {}
-
-
-
-
 
 instruction = f"""\n1:Display Your passwords 📃\n2:Adds password ➕\n3:Removes Password ➖\n4:Exit❌ \n0:search """
 
